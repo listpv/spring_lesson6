@@ -34,20 +34,22 @@ public class CatalogController {
 
     @GetMapping("/catalog/{id}")
     public String showCatalog(@PathVariable("id") Long id,
-                              Model model,
-                              @RequestParam(defaultValue = "1", name = "p") Integer page){
-        page = (page < 1) ? 1 : page;
-//        model.addAttribute("catalog", catalogService.findCatalogById(id));
-        List<Product> productList = catalogService.findProductsById(id);
-        for(Product o : productList){
-            productService.saveOrUpdate(o);
-        }
-        Page<Product> products = productService.findAll(page - 1, 2);
+                              Model model
+//            , @RequestParam(defaultValue = "1", name = "p") Integer page
+            )
+    {
+//        page = (page < 1) ? 1 : page;
+        model.addAttribute("catalog", catalogService.findCatalogById(id));
+//        List<Product> productList = catalogService.findProductsById(id);
+//        for(Product o : productList){
+//            productService.saveOrUpdate(o);
+//        }
+//        Page<Product> products = productService.findAll(page - 1, 2);
 //        model.addAttribute("products", catalogService.findProductsById(id));
 //        Page<Product> products = catalogService.findProductsById(id, page - 1, 2);
 //        model.addAttribute("products", catalogService.findProductsById(id, page - 1, 2));
-        model.addAttribute("products", products);
-        model.addAttribute("name", catalogService.findNameById(id));
+//        model.addAttribute("products", products);
+//        model.addAttribute("name", catalogService.findNameById(id));
 
 
         return "catalog";
