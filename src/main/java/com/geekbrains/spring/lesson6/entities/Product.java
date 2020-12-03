@@ -34,6 +34,18 @@ public class Product {
     @Column(name = "modify_date")
     private Date modifyDate;
 
+//    public Catalog getCatalog() {
+//        return catalog;
+//    }
+//
+//    public void setCatalog(Catalog catalog) {
+//        this.catalog = catalog;
+//    }
+
+//    @ManyToOne
+//    @JoinColumn(name = "catalog_id")
+//    private Catalog catalog;
+
     public Product() {
     }
 

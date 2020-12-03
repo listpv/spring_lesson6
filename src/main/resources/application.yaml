@@ -1,7 +1,7 @@
 server:
   port: 8989
   servlet:
-    context-path: /
+    context-path: /store
 
 spring:
   datasource:
@@ -16,7 +16,7 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.H2Dialect
         hbm2ddl:
-           #0auto: create
+#           0auto: create
            auto: update
 
   h2:
