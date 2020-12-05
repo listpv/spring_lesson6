@@ -17,7 +17,7 @@ import java.util.List;
 @Repository
 public interface ProductRepository extends JpaRepository<Product, Long>, JpaSpecificationExecutor<Product> {
 
-    @Query("SELECT c.products FROM Catalog c WHERE c.id = :id ")
+    @Query("SELECT cp FROM Catalog c JOIN c.products cp WHERE c.id = :id ")
     Page<Product> findAllProductsFromCatalog(@Param("id") Long id, Pageable pageable);
 
 //    @Query("SELECT c.products FROM Catalog c WHERE c.id = :id ")
@@ -28,5 +28,12 @@ public interface ProductRepository extends JpaRepository<Product, Long>, JpaSpec
 
     @Query("SELECT c.products FROM Catalog c WHERE c.id = :id ")
     Page<Product> findPageProductById(@Param("id") Long id, Pageable pageable);
+
+    @Query("SELECT p FROM Product p JOIN Catalog c WHERE c.id = :id")
+    Page<Product> findProductByCatalogId(@Param("id") Long id, Pageable pageable);
+
+
+    @Query("SELECT p FROM Product p WHERE p in (SELECT c.products FROM Catalog c WHERE c.id = :id)")
+    Page<Product> findProductFromCatalogById(@Param("id") Long id, Pageable pageable);
 
 }

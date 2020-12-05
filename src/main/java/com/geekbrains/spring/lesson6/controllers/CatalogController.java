@@ -42,23 +42,16 @@ public class CatalogController {
     @GetMapping("/catalog/{id}")
     public String showCatalog(@PathVariable("id") Long id,
                               Model model
-//            , @RequestParam(defaultValue = "1", name = "с") Integer page,
-//                              @RequestParam Map<String, String> params
+            , @RequestParam(defaultValue = "1", name = "с") Integer page,
+                              @RequestParam Map<String, String> params
             )
     {
-//        page = (page < 1) ? 1 : page;
-//        List<Product> productList= catalogService.findProductsById(id);
-//        CatalogFilter catalogFilter = new CatalogFilter(params);
-//        System.out.println(productService.findProductById(id));
-//        Page<Product> products = catalogService.findProductsById(id, page - 1, 2);
-//        Page<Product> products = productService.findAll(page - 1, 2);
-////        Page<Product> products = productService.findAllProductsFromCatalog(id,page - 1, 2);
-//        Page<Product> products = productService.findPageProductById(id, page - 1, 2);
-//        model.addAttribute("products", products);
+        page = (page < 1) ? 1 : page;
+        CatalogFilter catalogFilter = new CatalogFilter(params);Page<Product> products = productService.findAllProductsFromCatalog(id, page - 1, 2);
+        model.addAttribute("products", products);
 //        model.addAttribute("filterDefinition", catalogFilter.getFilterDefinition());
-//        model.addAttribute("name", catalogService.findNameById(id));
+        model.addAttribute("name", catalogService.findNameById(id));
 
-        model.addAttribute("catalog", catalogService.findCatalogById(id));
 
 
         return "catalog";

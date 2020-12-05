@@ -34,4 +34,6 @@ public interface CatalogRepository extends JpaRepository<Catalog, Long>
     @Query("SELECT c.name FROM Catalog c WHERE c.id = :id")
     String findNameById(@Param("id") Long id);
 
+
+
 }

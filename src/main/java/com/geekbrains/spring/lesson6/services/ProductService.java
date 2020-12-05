@@ -55,4 +55,12 @@ public class ProductService {
         return productRepository.findPageProductById(id, PageRequest.of(page, size));
     }
 
+    public Page<Product> findProductByCatalogId(Long id, int page, int size){
+        return productRepository.findProductByCatalogId(id, PageRequest.of(page, size));
+    }
+
+    public Page<Product> findProductFromCatalogById(Long id, int page, int size){
+        return productRepository.findProductFromCatalogById(id, PageRequest.of(page, size));
+    }
+
 }
