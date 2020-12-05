@@ -5,6 +5,8 @@ import com.geekbrains.spring.lesson6.entities.Product;
 import com.geekbrains.spring.lesson6.repositories.CatalogRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -29,6 +31,10 @@ public class CatalogService {
     public Page<Product> findProductsById(Long id, int page, int size){
         return catalogRepository.findProductsById(id, PageRequest.of(page, size));
     }
+
+//    public Page<Product> findProductsById(Long id, Specification<Product> spec, int page, int size){
+//        return catalogRepository.findProductsById(id, spec, PageRequest.of(page, size));
+//    }
 
     public Catalog findCatalogById(Long id){
         return catalogRepository.findCatalogById(id);

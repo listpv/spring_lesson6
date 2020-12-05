@@ -1920,3 +1920,60 @@ select count(.) as col_0_0_ from catalogs catalog0_ cross join catalogs_products
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "SELECT PRODUCT0_.ID AS ID1_5_, PRODUCT0_.CREATE_DATE AS CREATE_D2_5_, PRODUCT0_.MODIFY_DATE AS MODIFY_D3_5_, PRODUCT0_.PRICE AS PRICE4_5_, PRODUCT0_.TITLE AS TITLE5_5_ FROM PRODUCTS PRODUCT0_ INNER JOIN CATALOGS CATALOG1_ ON WHERE[*] CATALOG1_.ID=? LIMIT ?"; ожидалось "NOT, EXISTS, INTERSECTS, UNIQUE"
 Syntax error in SQL statement "SELECT PRODUCT0_.ID AS ID1_5_, PRODUCT0_.CREATE_DATE AS CREATE_D2_5_, PRODUCT0_.MODIFY_DATE AS MODIFY_D3_5_, PRODUCT0_.PRICE AS PRICE4_5_, PRODUCT0_.TITLE AS TITLE5_5_ FROM PRODUCTS PRODUCT0_ INNER JOIN CATALOGS CATALOG1_ ON WHERE[*] CATALOG1_.ID=? LIMIT ?"; expected "NOT, EXISTS, INTERSECTS, UNIQUE"; SQL statement:
 select product0_.id as id1_5_, product0_.create_date as create_d2_5_, product0_.modify_date as modify_d3_5_, product0_.price as price4_5_, product0_.title as title5_5_ from products product0_ inner join catalogs catalog1_ on where catalog1_.id=? limit ? [42001-200]
+2020-12-03 17:26:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "SELECT COUNT(.[*]) AS COL_0_0_ FROM CATALOGS CATALOG0_ CROSS JOIN CATALOGS_PRODUCTS PRODUCTS1_, PRODUCTS PRODUCT2_ WHERE CATALOG0_.ID=PRODUCTS1_.CATALOG_ID AND PRODUCTS1_.PRODUCTS_ID=PRODUCT2_.ID AND CATALOG0_.ID=?"; ожидалось "*, DISTINCT, ALL, NOT, EXISTS, INTERSECTS, UNIQUE"
+Syntax error in SQL statement "SELECT COUNT(.[*]) AS COL_0_0_ FROM CATALOGS CATALOG0_ CROSS JOIN CATALOGS_PRODUCTS PRODUCTS1_, PRODUCTS PRODUCT2_ WHERE CATALOG0_.ID=PRODUCTS1_.CATALOG_ID AND PRODUCTS1_.PRODUCTS_ID=PRODUCT2_.ID AND CATALOG0_.ID=?"; expected "*, DISTINCT, ALL, NOT, EXISTS, INTERSECTS, UNIQUE"; SQL statement:
+select count(.) as col_0_0_ from catalogs catalog0_ cross join catalogs_products products1_, products product2_ where catalog0_.id=products1_.catalog_id and products1_.products_id=product2_.id and catalog0_.id=? [42001-200]
+2020-12-03 17:29:22 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "SELECT COUNT(DISTINCT .[*]) AS COL_0_0_ FROM CATALOGS CATALOG0_ CROSS JOIN CATALOGS_PRODUCTS PRODUCTS1_, PRODUCTS PRODUCT2_ WHERE CATALOG0_.ID=PRODUCTS1_.CATALOG_ID AND PRODUCTS1_.PRODUCTS_ID=PRODUCT2_.ID AND CATALOG0_.ID=?"; ожидалось "NOT, EXISTS, INTERSECTS, UNIQUE"
+Syntax error in SQL statement "SELECT COUNT(DISTINCT .[*]) AS COL_0_0_ FROM CATALOGS CATALOG0_ CROSS JOIN CATALOGS_PRODUCTS PRODUCTS1_, PRODUCTS PRODUCT2_ WHERE CATALOG0_.ID=PRODUCTS1_.CATALOG_ID AND PRODUCTS1_.PRODUCTS_ID=PRODUCT2_.ID AND CATALOG0_.ID=?"; expected "NOT, EXISTS, INTERSECTS, UNIQUE"; SQL statement:
+select count(distinct .) as col_0_0_ from catalogs catalog0_ cross join catalogs_products products1_, products product2_ where catalog0_.id=products1_.catalog_id and products1_.products_id=product2_.id and catalog0_.id=? [42001-200]
+2020-12-03 17:34:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "SELECT COUNT(.[*]) AS COL_0_0_ FROM CATALOGS CATALOG0_ CROSS JOIN CATALOGS_PRODUCTS PRODUCTS1_, PRODUCTS PRODUCT2_ WHERE CATALOG0_.ID=PRODUCTS1_.CATALOG_ID AND PRODUCTS1_.PRODUCTS_ID=PRODUCT2_.ID AND CATALOG0_.ID=?"; ожидалось "*, DISTINCT, ALL, NOT, EXISTS, INTERSECTS, UNIQUE"
+Syntax error in SQL statement "SELECT COUNT(.[*]) AS COL_0_0_ FROM CATALOGS CATALOG0_ CROSS JOIN CATALOGS_PRODUCTS PRODUCTS1_, PRODUCTS PRODUCT2_ WHERE CATALOG0_.ID=PRODUCTS1_.CATALOG_ID AND PRODUCTS1_.PRODUCTS_ID=PRODUCT2_.ID AND CATALOG0_.ID=?"; expected "*, DISTINCT, ALL, NOT, EXISTS, INTERSECTS, UNIQUE"; SQL statement:
+select count(.) as col_0_0_ from catalogs catalog0_ cross join catalogs_products products1_, products product2_ where catalog0_.id=products1_.catalog_id and products1_.products_id=product2_.id and catalog0_.id=? [42001-200]
+2020-12-03 19:49:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "SELECT COUNT(.[*]) AS COL_0_0_ FROM CATALOGS CATALOG0_ CROSS JOIN CATALOGS_PRODUCTS PRODUCTS1_, PRODUCTS PRODUCT2_ WHERE CATALOG0_.ID=PRODUCTS1_.CATALOG_ID AND PRODUCTS1_.PRODUCTS_ID=PRODUCT2_.ID AND CATALOG0_.ID=?"; ожидалось "*, DISTINCT, ALL, NOT, EXISTS, INTERSECTS, UNIQUE"
+Syntax error in SQL statement "SELECT COUNT(.[*]) AS COL_0_0_ FROM CATALOGS CATALOG0_ CROSS JOIN CATALOGS_PRODUCTS PRODUCTS1_, PRODUCTS PRODUCT2_ WHERE CATALOG0_.ID=PRODUCTS1_.CATALOG_ID AND PRODUCTS1_.PRODUCTS_ID=PRODUCT2_.ID AND CATALOG0_.ID=?"; expected "*, DISTINCT, ALL, NOT, EXISTS, INTERSECTS, UNIQUE"; SQL statement:
+select count(.) as col_0_0_ from catalogs catalog0_ cross join catalogs_products products1_, products product2_ where catalog0_.id=products1_.catalog_id and products1_.products_id=product2_.id and catalog0_.id=? [42001-200]
+2020-12-03 21:57:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "SELECT COUNT(.[*]) AS COL_0_0_ FROM CATALOGS CATALOG0_ CROSS JOIN CATALOGS_PRODUCTS PRODUCTS1_, PRODUCTS PRODUCT2_ WHERE CATALOG0_.ID=PRODUCTS1_.CATALOG_ID AND PRODUCTS1_.PRODUCTS_ID=PRODUCT2_.ID AND CATALOG0_.ID=?"; ожидалось "*, DISTINCT, ALL, NOT, EXISTS, INTERSECTS, UNIQUE"
+Syntax error in SQL statement "SELECT COUNT(.[*]) AS COL_0_0_ FROM CATALOGS CATALOG0_ CROSS JOIN CATALOGS_PRODUCTS PRODUCTS1_, PRODUCTS PRODUCT2_ WHERE CATALOG0_.ID=PRODUCTS1_.CATALOG_ID AND PRODUCTS1_.PRODUCTS_ID=PRODUCT2_.ID AND CATALOG0_.ID=?"; expected "*, DISTINCT, ALL, NOT, EXISTS, INTERSECTS, UNIQUE"; SQL statement:
+select count(.) as col_0_0_ from catalogs catalog0_ cross join catalogs_products products1_, products product2_ where catalog0_.id=products1_.catalog_id and products1_.products_id=product2_.id and catalog0_.id=? [42001-200]
+2020-12-03 22:18:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "SELECT COUNT(.[*]) AS COL_0_0_ FROM CATALOGS CATALOG0_ CROSS JOIN CATALOGS_PRODUCTS PRODUCTS1_, PRODUCTS PRODUCT2_ WHERE CATALOG0_.ID=PRODUCTS1_.CATALOG_ID AND PRODUCTS1_.PRODUCTS_ID=PRODUCT2_.ID AND CATALOG0_.ID=?"; ожидалось "*, DISTINCT, ALL, NOT, EXISTS, INTERSECTS, UNIQUE"
+Syntax error in SQL statement "SELECT COUNT(.[*]) AS COL_0_0_ FROM CATALOGS CATALOG0_ CROSS JOIN CATALOGS_PRODUCTS PRODUCTS1_, PRODUCTS PRODUCT2_ WHERE CATALOG0_.ID=PRODUCTS1_.CATALOG_ID AND PRODUCTS1_.PRODUCTS_ID=PRODUCT2_.ID AND CATALOG0_.ID=?"; expected "*, DISTINCT, ALL, NOT, EXISTS, INTERSECTS, UNIQUE"; SQL statement:
+select count(.) as col_0_0_ from catalogs catalog0_ cross join catalogs_products products1_, products product2_ where catalog0_.id=products1_.catalog_id and products1_.products_id=product2_.id and catalog0_.id=? [42001-200]
+2020-12-03 19:22:40 jdbc[3]: exception
+java.sql.SQLClientInfoException: Client info name 'ApplicationName' not supported.
+	at org.h2.jdbc.JdbcConnection.setClientInfo(JdbcConnection.java:1749)
+	at com.intellij.database.remote.jdbc.impl.RemoteConnectionImpl.setClientInfo(RemoteConnectionImpl.java:466)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:359)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:562)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:796)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:677)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:676)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-12-03 22:25:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "SELECT COUNT(.[*]) AS COL_0_0_ FROM CATALOGS CATALOG0_ CROSS JOIN CATALOGS_PRODUCTS PRODUCTS1_, PRODUCTS PRODUCT2_ WHERE CATALOG0_.ID=PRODUCTS1_.CATALOG_ID AND PRODUCTS1_.PRODUCTS_ID=PRODUCT2_.ID AND CATALOG0_.ID=?"; ожидалось "*, DISTINCT, ALL, NOT, EXISTS, INTERSECTS, UNIQUE"
+Syntax error in SQL statement "SELECT COUNT(.[*]) AS COL_0_0_ FROM CATALOGS CATALOG0_ CROSS JOIN CATALOGS_PRODUCTS PRODUCTS1_, PRODUCTS PRODUCT2_ WHERE CATALOG0_.ID=PRODUCTS1_.CATALOG_ID AND PRODUCTS1_.PRODUCTS_ID=PRODUCT2_.ID AND CATALOG0_.ID=?"; expected "*, DISTINCT, ALL, NOT, EXISTS, INTERSECTS, UNIQUE"; SQL statement:
+select count(.) as col_0_0_ from catalogs catalog0_ cross join catalogs_products products1_, products product2_ where catalog0_.id=products1_.catalog_id and products1_.products_id=product2_.id and catalog0_.id=? [42001-200]
+2020-12-03 23:27:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "SELECT COUNT(.[*]) AS COL_0_0_ FROM CATALOGS CATALOG0_ CROSS JOIN CATALOGS_PRODUCTS PRODUCTS1_, PRODUCTS PRODUCT2_ WHERE CATALOG0_.ID=PRODUCTS1_.CATALOG_ID AND PRODUCTS1_.PRODUCTS_ID=PRODUCT2_.ID AND CATALOG0_.ID=?"; ожидалось "*, DISTINCT, ALL, NOT, EXISTS, INTERSECTS, UNIQUE"
+Syntax error in SQL statement "SELECT COUNT(.[*]) AS COL_0_0_ FROM CATALOGS CATALOG0_ CROSS JOIN CATALOGS_PRODUCTS PRODUCTS1_, PRODUCTS PRODUCT2_ WHERE CATALOG0_.ID=PRODUCTS1_.CATALOG_ID AND PRODUCTS1_.PRODUCTS_ID=PRODUCT2_.ID AND CATALOG0_.ID=?"; expected "*, DISTINCT, ALL, NOT, EXISTS, INTERSECTS, UNIQUE"; SQL statement:
+select count(.) as col_0_0_ from catalogs catalog0_ cross join catalogs_products products1_, products product2_ where catalog0_.id=products1_.catalog_id and products1_.products_id=product2_.id and catalog0_.id=? [42001-200]
+2020-12-05 07:41:19 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "SELECT COUNT(.[*]) AS COL_0_0_ FROM CATALOGS CATALOG0_ CROSS JOIN CATALOGS_PRODUCTS PRODUCTS1_, PRODUCTS PRODUCT2_ WHERE CATALOG0_.ID=PRODUCTS1_.CATALOG_ID AND PRODUCTS1_.PRODUCTS_ID=PRODUCT2_.ID AND CATALOG0_.ID=?"; ожидалось "*, DISTINCT, ALL, NOT, EXISTS, INTERSECTS, UNIQUE"
+Syntax error in SQL statement "SELECT COUNT(.[*]) AS COL_0_0_ FROM CATALOGS CATALOG0_ CROSS JOIN CATALOGS_PRODUCTS PRODUCTS1_, PRODUCTS PRODUCT2_ WHERE CATALOG0_.ID=PRODUCTS1_.CATALOG_ID AND PRODUCTS1_.PRODUCTS_ID=PRODUCT2_.ID AND CATALOG0_.ID=?"; expected "*, DISTINCT, ALL, NOT, EXISTS, INTERSECTS, UNIQUE"; SQL statement:
+select count(.) as col_0_0_ from catalogs catalog0_ cross join catalogs_products products1_, products product2_ where catalog0_.id=products1_.catalog_id and products1_.products_id=product2_.id and catalog0_.id=? [42001-200]
