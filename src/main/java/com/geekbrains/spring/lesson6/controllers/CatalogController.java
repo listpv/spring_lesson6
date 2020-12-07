@@ -25,14 +25,9 @@ import java.util.Map;
 public class CatalogController {
 
     private CatalogService catalogService;
-//    private ProductService productService;
-//    Sort sort;
 
-    public CatalogController(CatalogService catalogService
-//            , ProductService productService
-    ) {
+    public CatalogController(CatalogService catalogService) {
         this.catalogService = catalogService;
-//        this.productService = productService;
     }
 
     @GetMapping
@@ -44,17 +39,13 @@ public class CatalogController {
     @GetMapping("/catalog/{id}")
     public String showCatalog(@PathVariable("id") Long id,
                               Model model
-            , @RequestParam(defaultValue = "1", name = "c") Integer page
-//            , @RequestParam Map<String, String> params
-            )
+            , @RequestParam(defaultValue = "1", name = "c") Integer page)
     {
         page = (page < 1) ? 1 : page;
-//        CatalogFilter catalogFilter = new CatalogFilter(params);
-//        Page<Product> products = productService.findAllProductsFromCatalog(id, page - 1, 2);
-        Page<Product> catalog = catalogService.findAllProductsFromCatalog(id,page - 1, 3);
+        Page<Product> catalog = catalogService.findAllProductsFromCatalog(id,page - 1, 1);
         model.addAttribute("catalog", catalog);
-//        model.addAttribute("filterDefinition", catalogFilter.getFilterDefinition());
         model.addAttribute("name", catalogService.findNameById(id));
+        model.addAttribute("catalogId", id);
 
         return "catalog";
     }
