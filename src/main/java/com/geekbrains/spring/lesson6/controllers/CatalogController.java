@@ -51,7 +51,7 @@ public class CatalogController {
         page = (page < 1) ? 1 : page;
 //        CatalogFilter catalogFilter = new CatalogFilter(params);
 //        Page<Product> products = productService.findAllProductsFromCatalog(id, page - 1, 2);
-        Page<Product> catalog = catalogService.findAllProductsFromCatalog(id,page - 1, 1);
+        Page<Product> catalog = catalogService.findAllProductsFromCatalog(id,page - 1, 3);
         model.addAttribute("catalog", catalog);
 //        model.addAttribute("filterDefinition", catalogFilter.getFilterDefinition());
         model.addAttribute("name", catalogService.findNameById(id));

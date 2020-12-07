@@ -61,17 +61,17 @@
         <ul class="pagination">
             <li class="page-item" th:classappend="${catalog.isFirst() ? 'disabled' : ''}">
                 <a class="page-link"
-                   th:href="@{'/catalogs/catalog/' + ${catalog.getNumberOfElements()} +'/?c=' + ${catalog.previousOrFirstPageable().getPageNumber() + 1}}">Назад</a>
+                   th:href="@{'/catalogs/catalog/' + ${catalog.getNumber() + 1} +'/?c=' + ${catalog.previousOrFirstPageable().getPageNumber() + 1}}">Назад</a>
             </li>
 
             <li class="page-item" th:classappend="${catalog.getNumber() + 1 == i ? 'active' : ''}"
                 th:each="i : ${#numbers.sequence(1, catalog.getTotalPages())}">
-                <a class="page-link" th:text="${i}" th:href="@{'/catalogs/catalog/' +${catalog.getNumberOfElements()} + '/?c=' + ${i}}"></a>
+                <a class="page-link" th:text="${i}" th:href="@{'/catalogs/catalog/' +${catalog.getNumber() + 1} + '/?c=' + ${i}}"></a>
             </li>
 
             <li class="page-item"  th:classappend="${catalog.isLast() ? 'disabled' : ''}">
                 <a class="page-link"
-                   th:href="@{'/catalogs/catalog/' + ${catalog.getNumberOfElements()} + '/?c='+ ${catalog.nextOrLastPageable().getPageNumber() + 1}}">Вперед</a>
+                   th:href="@{'/catalogs/catalog/' + ${catalog.getNumber() + 1} + '/?c='+ ${catalog.nextOrLastPageable().getPageNumber() + 1}}">Вперед</a>
             </li>
         </ul>
     </nav>
