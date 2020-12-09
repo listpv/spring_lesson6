@@ -45,7 +45,8 @@ public class CatalogController {
         Page<Product> catalog = catalogService.findAllProductsFromCatalog(id,page - 1, 1);
         model.addAttribute("catalog", catalog);
         model.addAttribute("name", catalogService.findNameById(id));
-        model.addAttribute("catalogId", id);
+//        model.addAttribute("catalogId", id);            есть более лёгкий способ без этого. В /catalog сейчас лёгкий.
+//        Для этого способа раскомментировать "Page navigation"-блок.
 
         return "catalog";
     }
