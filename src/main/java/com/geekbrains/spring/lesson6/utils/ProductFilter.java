@@ -10,6 +10,9 @@ public class ProductFilter {
     private Specification<Product> spec;
     private String filterDefinition;
 
+    public ProductFilter() {
+    }
+
     public ProductFilter(Map<String, String> params) {
         StringBuilder filterDefinitionBuilder = new StringBuilder();
         spec = Specification.where(null);
@@ -34,6 +37,7 @@ public class ProductFilter {
 
         filterDefinition = filterDefinitionBuilder.toString();
     }
+
 
     public Specification<Product> getSpec() {
         return spec;

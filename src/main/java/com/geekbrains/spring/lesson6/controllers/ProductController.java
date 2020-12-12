@@ -1,7 +1,9 @@
 package com.geekbrains.spring.lesson6.controllers;
 
+import com.geekbrains.spring.lesson6.entities.Catalog;
 import com.geekbrains.spring.lesson6.entities.Product;
 import com.geekbrains.spring.lesson6.exceptions.ResourceNotFoundException;
+import com.geekbrains.spring.lesson6.repositories.CatalogRepository;
 import com.geekbrains.spring.lesson6.services.ProductService;
 import com.geekbrains.spring.lesson6.utils.ProductFilter;
 import org.springframework.data.domain.Page;
@@ -12,6 +14,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.List;
 import java.util.Map;
 
 @Controller

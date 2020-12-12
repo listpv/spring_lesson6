@@ -19,7 +19,9 @@ public class Order {
     @JoinColumn(name = "customer_id")
     private Customer customer;
 
-    @OneToMany(mappedBy = "order", cascade = {CascadeType.REMOVE, CascadeType.PERSIST})
+    @OneToMany(mappedBy = "order"
+            , cascade = {CascadeType.REMOVE, CascadeType.PERSIST}
+            )
     private List<OrderEntry> orderEntries;
 
     @Column(name = "totalPrice")

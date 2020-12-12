@@ -176,104 +176,136 @@
     <collation id="161" parent="2" name="UKRAINIAN_UKRAINE"/>
     <collation id="162" parent="2" name="VIETNAMESE"/>
     <collation id="163" parent="2" name="VIETNAMESE_VIETNAM"/>
-    <sequence id="164" parent="4" name="SYSTEM_SEQUENCE_260ADF6A_C877_45F6_A2E7_E8AB800E574A">
-      <ObjectId>19</ObjectId>
-      <NameSurrogate>1</NameSurrogate>
-      <CacheSize>32</CacheSize>
-      <AutoCreated>1</AutoCreated>
-    </sequence>
-    <sequence id="165" parent="4" name="SYSTEM_SEQUENCE_537D99CE_5007_43EC_AF6B_E8C366FF4D6D">
-      <ObjectId>27</ObjectId>
-      <NameSurrogate>1</NameSurrogate>
-      <CacheSize>32</CacheSize>
-      <AutoCreated>1</AutoCreated>
-    </sequence>
-    <sequence id="166" parent="4" name="SYSTEM_SEQUENCE_8B6855B9_1474_410A_BDC5_E6710070EC75">
-      <ObjectId>23</ObjectId>
-      <NameSurrogate>1</NameSurrogate>
-      <CacheSize>32</CacheSize>
-      <AutoCreated>1</AutoCreated>
-    </sequence>
-    <sequence id="167" parent="4" name="SYSTEM_SEQUENCE_C2BC83B2_9C35_43DD_BF34_89BF681128A2">
+    <sequence id="164" parent="4" name="SYSTEM_SEQUENCE_5915C7D9_C385_417F_AC72_ADA3D688F300">
       <ObjectId>15</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CacheSize>32</CacheSize>
       <AutoCreated>1</AutoCreated>
     </sequence>
-    <table id="168" parent="4" name="CUSTOMERS">
+    <sequence id="165" parent="4" name="SYSTEM_SEQUENCE_6FFBD6E1_69F4_44A9_AAB2_FD2510943780">
+      <ObjectId>23</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CacheSize>32</CacheSize>
+      <AutoCreated>1</AutoCreated>
+    </sequence>
+    <sequence id="166" parent="4" name="SYSTEM_SEQUENCE_CEE80831_00D3_4AE9_B207_A1385AB3B05A">
+      <ObjectId>27</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CacheSize>32</CacheSize>
+      <AutoCreated>1</AutoCreated>
+    </sequence>
+    <sequence id="167" parent="4" name="SYSTEM_SEQUENCE_D35D3DC2_A17B_4D01_8F52_9034847E6701">
+      <ObjectId>31</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CacheSize>32</CacheSize>
+      <AutoCreated>1</AutoCreated>
+    </sequence>
+    <sequence id="168" parent="4" name="SYSTEM_SEQUENCE_D5F5B942_C445_4678_8D3D_AA7936D0D6FF">
+      <ObjectId>19</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CacheSize>32</CacheSize>
+      <AutoCreated>1</AutoCreated>
+    </sequence>
+    <table id="169" parent="4" name="CATALOGS">
       <ObjectId>14</ObjectId>
     </table>
-    <table id="169" parent="4" name="ORDERS">
-      <ObjectId>22</ObjectId>
-    </table>
-    <table id="170" parent="4" name="ORDER_ITEMS">
+    <table id="170" parent="4" name="CUSTOMERS">
       <ObjectId>18</ObjectId>
     </table>
-    <table id="171" parent="4" name="PRODUCTS">
+    <table id="171" parent="4" name="ORDERS">
       <ObjectId>26</ObjectId>
     </table>
-    <column id="172" parent="168" name="ID">
+    <table id="172" parent="4" name="ORDER_ITEMS">
+      <ObjectId>22</ObjectId>
+    </table>
+    <table id="173" parent="4" name="PRODUCTS">
+      <ObjectId>30</ObjectId>
+    </table>
+    <column id="174" parent="169" name="ID">
       <Position>1</Position>
       <DataType>BIGINT|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="173" parent="168" name="NAME">
+    <column id="175" parent="169" name="NAME">
       <Position>2</Position>
       <DataType>VARCHAR(255)|0s</DataType>
     </column>
-    <index id="174" parent="168" name="PRIMARY_KEY_6">
+    <index id="176" parent="169" name="PRIMARY_KEY_3">
       <ObjectId>16</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <SourceTextLength>72</SourceTextLength>
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+      <AutoCreated>1</AutoCreated>
+    </index>
+    <key id="177" parent="169" name="CONSTRAINT_3">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="178" parent="170" name="ID">
+      <Position>1</Position>
+      <DataType>BIGINT|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="179" parent="170" name="NAME">
+      <Position>2</Position>
+      <DataType>VARCHAR(255)|0s</DataType>
+    </column>
+    <index id="180" parent="170" name="PRIMARY_KEY_6">
+      <ObjectId>20</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <SourceTextLength>73</SourceTextLength>
       <ColNames>ID</ColNames>
       <Unique>1</Unique>
       <AutoCreated>1</AutoCreated>
     </index>
-    <key id="175" parent="168" name="CONSTRAINT_6">
+    <key id="181" parent="170" name="CONSTRAINT_6">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="176" parent="169" name="ID">
+    <column id="182" parent="171" name="ID">
       <Position>1</Position>
       <DataType>BIGINT|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="177" parent="169" name="CODE">
+    <column id="183" parent="171" name="CODE">
       <Position>2</Position>
       <DataType>VARCHAR(255)|0s</DataType>
     </column>
-    <column id="178" parent="169" name="TOTAL_PRICE">
+    <column id="184" parent="171" name="TOTAL_PRICE">
       <Position>3</Position>
       <DataType>DOUBLE|0s</DataType>
     </column>
-    <column id="179" parent="169" name="CUSTOMER_ID">
+    <column id="185" parent="171" name="CUSTOMER_ID">
       <Position>4</Position>
       <DataType>BIGINT|0s</DataType>
     </column>
-    <index id="180" parent="169" name="PRIMARY_KEY_8">
-      <ObjectId>24</ObjectId>
+    <index id="186" parent="171" name="PRIMARY_KEY_8">
+      <ObjectId>28</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <SourceTextLength>70</SourceTextLength>
       <ColNames>ID</ColNames>
       <Unique>1</Unique>
       <AutoCreated>1</AutoCreated>
     </index>
-    <index id="181" parent="169" name="FKPXTB8AWMI0DK6SMOH2VP1LITG_INDEX_8">
-      <ObjectId>34</ObjectId>
+    <index id="187" parent="171" name="FKPXTB8AWMI0DK6SMOH2VP1LITG_INDEX_8">
+      <ObjectId>38</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <SourceTextLength>95</SourceTextLength>
       <ColNames>CUSTOMER_ID</ColNames>
       <AutoCreated>1</AutoCreated>
     </index>
-    <key id="182" parent="169" name="CONSTRAINT_8">
+    <key id="188" parent="171" name="CONSTRAINT_8">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="183" parent="169" name="FKPXTB8AWMI0DK6SMOH2VP1LITG">
+    <foreign-key id="189" parent="171" name="FKPXTB8AWMI0DK6SMOH2VP1LITG">
       <ColNames>CUSTOMER_ID</ColNames>
       <RefTableName>CUSTOMERS</RefTableName>
       <RefKeyName>PRIMARY_KEY_6</RefKeyName>
@@ -281,60 +313,60 @@
       <OnDelete>restrict</OnDelete>
       <OnUpdate>restrict</OnUpdate>
     </foreign-key>
-    <column id="184" parent="170" name="ID">
+    <column id="190" parent="172" name="ID">
       <Position>1</Position>
       <DataType>BIGINT|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="185" parent="170" name="PRICE_PER_PRODUCT">
+    <column id="191" parent="172" name="PRICE_PER_PRODUCT">
       <Position>2</Position>
       <DataType>DOUBLE|0s</DataType>
     </column>
-    <column id="186" parent="170" name="QUANTITY">
+    <column id="192" parent="172" name="QUANTITY">
       <Position>3</Position>
       <DataType>INTEGER|0s</DataType>
     </column>
-    <column id="187" parent="170" name="PRICE">
+    <column id="193" parent="172" name="PRICE">
       <Position>4</Position>
       <DataType>DOUBLE|0s</DataType>
     </column>
-    <column id="188" parent="170" name="ORDER_ID">
+    <column id="194" parent="172" name="ORDER_ID">
       <Position>5</Position>
       <DataType>BIGINT|0s</DataType>
     </column>
-    <column id="189" parent="170" name="PRODUCT_ID">
+    <column id="195" parent="172" name="PRODUCT_ID">
       <Position>6</Position>
       <DataType>BIGINT|0s</DataType>
     </column>
-    <index id="190" parent="170" name="PRIMARY_KEY_2">
-      <ObjectId>20</ObjectId>
+    <index id="196" parent="172" name="PRIMARY_KEY_2">
+      <ObjectId>24</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <SourceTextLength>75</SourceTextLength>
       <ColNames>ID</ColNames>
       <Unique>1</Unique>
       <AutoCreated>1</AutoCreated>
     </index>
-    <index id="191" parent="170" name="FKBIOXGBV59VETRXE0EJFUBEP1W_INDEX_2">
-      <ObjectId>30</ObjectId>
+    <index id="197" parent="172" name="FKBIOXGBV59VETRXE0EJFUBEP1W_INDEX_2">
+      <ObjectId>34</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <SourceTextLength>97</SourceTextLength>
       <ColNames>ORDER_ID</ColNames>
       <AutoCreated>1</AutoCreated>
     </index>
-    <index id="192" parent="170" name="FKOCIMC7DTR037RH4LS4L95NLFI_INDEX_2">
-      <ObjectId>32</ObjectId>
+    <index id="198" parent="172" name="FKOCIMC7DTR037RH4LS4L95NLFI_INDEX_2">
+      <ObjectId>36</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <SourceTextLength>99</SourceTextLength>
       <ColNames>PRODUCT_ID</ColNames>
       <AutoCreated>1</AutoCreated>
     </index>
-    <key id="193" parent="170" name="CONSTRAINT_2">
+    <key id="199" parent="172" name="CONSTRAINT_2">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="194" parent="170" name="FKBIOXGBV59VETRXE0EJFUBEP1W">
+    <foreign-key id="200" parent="172" name="FKBIOXGBV59VETRXE0EJFUBEP1W">
       <ColNames>ORDER_ID</ColNames>
       <RefTableName>ORDERS</RefTableName>
       <RefKeyName>PRIMARY_KEY_8</RefKeyName>
@@ -342,7 +374,7 @@
       <OnDelete>restrict</OnDelete>
       <OnUpdate>restrict</OnUpdate>
     </foreign-key>
-    <foreign-key id="195" parent="170" name="FKOCIMC7DTR037RH4LS4L95NLFI">
+    <foreign-key id="201" parent="172" name="FKOCIMC7DTR037RH4LS4L95NLFI">
       <ColNames>PRODUCT_ID</ColNames>
       <RefTableName>PRODUCTS</RefTableName>
       <RefKeyName>PRIMARY_KEY_F</RefKeyName>
@@ -350,40 +382,59 @@
       <OnDelete>restrict</OnDelete>
       <OnUpdate>restrict</OnUpdate>
     </foreign-key>
-    <column id="196" parent="171" name="ID">
+    <column id="202" parent="173" name="ID">
       <Position>1</Position>
       <DataType>BIGINT|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="197" parent="171" name="CREATE_DATE">
+    <column id="203" parent="173" name="CREATE_DATE">
       <Position>2</Position>
       <DataType>TIMESTAMP|0s</DataType>
     </column>
-    <column id="198" parent="171" name="MODIFY_DATE">
+    <column id="204" parent="173" name="MODIFY_DATE">
       <Position>3</Position>
       <DataType>TIMESTAMP|0s</DataType>
     </column>
-    <column id="199" parent="171" name="PRICE">
+    <column id="205" parent="173" name="PRICE">
       <Position>4</Position>
       <DataType>DOUBLE|0s</DataType>
     </column>
-    <column id="200" parent="171" name="TITLE">
+    <column id="206" parent="173" name="TITLE">
       <Position>5</Position>
       <DataType>VARCHAR(20)|0s</DataType>
     </column>
-    <index id="201" parent="171" name="PRIMARY_KEY_F">
-      <ObjectId>28</ObjectId>
+    <column id="207" parent="173" name="CATALOG_ID">
+      <Position>6</Position>
+      <DataType>BIGINT|0s</DataType>
+    </column>
+    <index id="208" parent="173" name="PRIMARY_KEY_F">
+      <ObjectId>32</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <SourceTextLength>72</SourceTextLength>
       <ColNames>ID</ColNames>
       <Unique>1</Unique>
       <AutoCreated>1</AutoCreated>
     </index>
-    <key id="202" parent="171" name="CONSTRAINT_F">
+    <index id="209" parent="173" name="FKR9G72VSFWC9LUPWUTNUT4W7KF_INDEX_F">
+      <ObjectId>40</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <SourceTextLength>96</SourceTextLength>
+      <ColNames>CATALOG_ID</ColNames>
+      <AutoCreated>1</AutoCreated>
+    </index>
+    <key id="210" parent="173" name="CONSTRAINT_F">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
+    <foreign-key id="211" parent="173" name="FKR9G72VSFWC9LUPWUTNUT4W7KF">
+      <ColNames>CATALOG_ID</ColNames>
+      <RefTableName>CATALOGS</RefTableName>
+      <RefKeyName>PRIMARY_KEY_3</RefKeyName>
+      <RefColNames>ID</RefColNames>
+      <OnDelete>restrict</OnDelete>
+      <OnUpdate>restrict</OnUpdate>
+    </foreign-key>
   </database-model>
 </dataSource>
